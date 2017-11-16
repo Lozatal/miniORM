@@ -118,16 +118,13 @@ abstract class Model{
 	//Associations
 	
 	public function belongs_to($nom, $id){
-		$loader="SGBD\\".$nom;
-		$result=new $loader();
-		$valeur=$this->$id;
-		$result=$result::first($valeur);
+		$result=new $nom();
+		$result=$result::first($this->$id;);
 		return $result;
 	}
 	
 	public function has_many($nom, $id){
-		$loader="SGBD\\".$nom;
-		$result=new $loader();
+		$result=new $nom();
 		$result=$result::find([$id,'=',$this->id]);
 		return $result;
 	}
