@@ -9,6 +9,6 @@ class Categorie extends Model{
 	static $idcolumn='id';
 	
 	public function article(){
-		return $this->has_many('\SGBD\article', 'id_categ');
+		return $this->has_many("SGBD\article", 'id_categ');
 	}
 }

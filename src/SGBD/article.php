@@ -9,6 +9,6 @@ class Article extends Model{
 	static $idcolumn='id';
 	
 	public function categorie(){
-		return $this->belongs_to("\SGBD\categorie", 'id_categ');
+		return $this->belongs_to("SGBD\categorie", 'id_categ');
 	}
 }

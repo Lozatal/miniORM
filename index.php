@@ -72,18 +72,20 @@ var_dump($categorie::first(1));
 $cat=$article->categorie();
 var_dump($cat::first(1));
 
-
+*/
 $categorie = new categorie();
 $categorie = $categorie::first(1);
 echo $categorie->id;
 $art=$categorie->article;
-echo $art[2]->nom;
+echo $art[0]->nom;
+
+echo "<br><br>";
 
 $article = $article::first(66);
 echo $article->id_categ;
 $cat=$article->categorie();
 echo $cat->nom;
-*/
+
 
 
 

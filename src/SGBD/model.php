@@ -119,13 +119,14 @@ abstract class Model{
 	
 	public function belongs_to($nom, $id){
 		$result=new $nom();
-		$result=$result::first($this->$id;);
+		$result=$result::first($this->$id);
 		return $result;
 	}
 	
 	public function has_many($nom, $id){
 		$result=new $nom();
-		$result=$result::find([$id,'=',$this->id]);
+		$key=static::$idColumn;
+		$result=$result::find([$id,'=',$this->$key]);
 		return $result;
 	}
 }
